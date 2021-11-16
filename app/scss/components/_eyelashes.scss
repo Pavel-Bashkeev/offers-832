@@ -1,0 +1,82 @@
+.eyelashes {
+  margin-top: -20px;
+  background-image: url('../images/dest/eyelashes/eyelashes-bg.jpg');
+  @extend %bg-contain;
+  background-position: right top;
+  background-size: auto;
+  position: relative;
+  z-index: 1;
+
+  &__title {
+    line-height: 45px;
+    margin-bottom: 100px;
+  }
+}
+
+.eyelashes-items {
+  margin-bottom: 25px;
+}
+
+.eyelashes-item {
+  width: fit-content;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &::after {
+    content: '';
+    width: 254px;
+    height: 1px;
+    background-color: #B82E13;
+    display: block;
+  }
+
+  &__text {
+    padding-left: 15px;
+    max-width: 285px;
+    font: 400 20px/26px var(--font);
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width:450px) {
+  .eyelashes {
+    margin-top: -30px;
+  }
+
+  .eyelashes__title {
+    text-align: center;
+  }
+
+  .eyelashes-item__text {
+    max-width: 250px;
+  }
+
+  .eyelashes-item::after {
+    max-width: 210px;
+  }
+}
+
+@media (max-width: 390px) {
+  .eyelashes {
+    background-position: 50% top;
+  }
+
+  .eyelashes__title {
+    margin-bottom: 35px;
+  }
+
+  .eyelashes-items {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 361px) {
+  .eyelashes-item__text {
+    padding-left: 5px;
+    max-width: 210px;
+
+    font: 400 20px /23px var(--font);
+  }
+}

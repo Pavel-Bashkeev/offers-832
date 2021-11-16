@@ -1,0 +1,147 @@
+.hero {
+  background-image: url('../images/dest/hero/hero-bg.jpg');
+  @extend %bg-contain;
+  background-position: left top;
+  min-height: 673px;
+  padding: 30px 0 20px;
+  position: relative;
+  z-index: 1;
+  background-size: 480px;
+  &__container{
+    margin-bottom: 10px;
+  }
+  &__title {
+    font: 800 35px/40px var(--font);
+    color: $accent;
+    letter-spacing: -0.05em;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font: 600 20px/25px var(--font);
+    color: $black;
+    padding: 4px 26px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    width: fit-content;
+    margin-bottom: 25px;
+  }
+  &__link{
+    margin-bottom: 35px;
+  }
+  &__text{
+    &-count{
+      background-color: $accent;
+      color: $white;
+      padding: 0 5px;
+    }
+  }
+}
+
+.hero-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      content: '';
+      width: 29px;
+      height: 29px;
+      margin-right: 13px;
+      flex-shrink: 0;
+      background-image: url('../images/dest/icons/check.svg');
+      @extend %bg-cover;
+    }
+
+    &-text {
+      max-width: 190px;
+      color: $black;
+      font: 600 18px/24px var(--forn);
+    }
+  }
+}
+
+.hero-message {
+  &__donative {
+    margin-left: auto;
+    margin-right: 15px;
+    margin-bottom: -30px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__box {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    max-width: 230px;
+
+    &-tail {
+      display: block;
+      margin-left: auto;
+      margin-top: -11px;
+    }
+  }
+
+  &__text {
+    background-color: #FFF48C;
+    padding: 30px 30px 17px 21px;
+    border-radius: 10px;
+    font: 400 18px/24px var(--font);
+
+  }
+}
+
+.hero-info {
+  padding-left: 15px;
+  margin-bottom: 30px;
+  .price{
+    padding-top: 20px;
+    margin-right: 15px;
+    &-old{
+      font:800px 25px/34px var(--font);
+      color: #808080;
+      text-decoration: line-through;
+      &__currency{
+        font:600 19px/25px var(--font);
+      }
+    }
+    &-new{
+      font:800 70px/80px var(--font);
+      color: #B82E13;
+      &__currency{
+        font-size: 35px;
+        line-height: 40px;
+      }
+    }
+  }
+}
+.hero-discount{
+  width: 85px;
+  height: 75px;
+  right: 19%;
+  top:-35px;
+  background-image: url('../images/dest/hero/discount-bg.png');
+  @extend %bg-cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__text{
+    color: $white;
+    font:700 20px/27px var(--font);
+    margin-top: -10px;
+  }
+}
+@media (max-width:420px) {
+  .hero-info__box{
+    margin-top: 5%;
+  }
+  .hero-discount{
+    top:0;
+    right: 12%;
+  }
+}
+@media (max-width:390px) {
+  .hero-list__item-text{
+    max-width: 180px;
+  }
+}
